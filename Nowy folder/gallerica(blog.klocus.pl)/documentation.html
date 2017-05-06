@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Dokumentacja - Gallerica 0.2</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="example/style.css" type="text/css">
+</head>
+<body>
+<div id="documentation">
+	<h2>Podstawowe informacje</h2>
+	Skrypt do działania wymaga serwera obsługującego PHP.<br/>
+	Aby galeria mogła prawidłowo funkcjonować, należy również wyedytować ustawienia
+	w pliku <em><strong>gallery.php</strong></em>. Po tej czynności, należy wgrać plik na serwer. 
+	Folder z miniaturkami zdjęć powinien posiadać uprawienia <em><strong>0777</strong></em>.<br/>
+	
+	<h2>Implementacja skryptu</h2>
+	Aby umiesić galerię na swojej stronie, należy wczytać skrypt galerii do pliku oraz skorzystać z dwóch funkcji:<br/>
+	<code>
+	&lt;?php<br/>
+	require_once(&apos;gallery.php&apos;);<br/>
+	images_list();<br/>
+	images_pagination(); <br/>
+	?&gt;
+	</code>
+	
+	<h2>Funkcja <em>images_list()</em></h2>
+	Funkcja ta służy do wyświetlania miniatur obarczonych hiperłączem. Można określić dla niej własny wzór linków 
+	używając przy tym dwóch tagów: 
+	<ul>
+		<li><em><strong>{URL}</strong></em> - ścieżka do obrazka</li>
+		<li><em><strong>{THUMB_URL}</strong></em> - ścieżka do miniaturki</li>
+	</ul>
+	<strong>Przykład:</strong><br/>
+	<code>images_list(&apos;&lt;a href=&quot;{URL}&quot; class=&quot;thumbnail&quot;&gt;&lt;img src=&quot;{THUMB_URL}&quot; /&gt;&lt;/a&gt;&apos;);</code>
+	
+	<h2>Funkcja <em>images_pagination()</em></h2>
+	Funkcja ta służy do wyświetlania paginacji w formie kolejnych, numerycznych stron. Dla niej również można określić własny wzór linków oraz aktuanej strony
+	używając przy tym dwóch tagów: 
+	<ul>
+		<li><em><strong>{URL}</strong></em> - adres do podstrony</li>
+		<li><em><strong>{NUMBER}</strong></em> - numer podstrony</li>
+	</ul>
+	W przeciwieństwie do pierwszej funkcji, ta składa się z dwóch elementów - wzoru dla aktualnej podstrony oraz dalszych linków.<br/><br/>
+	<strong>Przykład:</strong><br/>
+	<code>images_pagination(&apos;&lt;strong&gt;{NUMBER}&lt;/strong&gt;&apos;,&apos;&lt;a href=&quot;{URL}&quot;&gt;{NUMBER}&lt;/a&gt;&apos;);</code><br/>
+	<em>Gallerica 0.2</em><br/>
+
+</div>
+</body>
+</html>

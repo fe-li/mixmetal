@@ -1,0 +1,39 @@
+#lightbox {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 998;
+}
+#lightbox img {
+	border: 0 !important;
+	background: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+#lightbox #center{
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	max-width: 50%;
+	max-height: 50%;
+	padding: 16px;
+	border: 5px solid rgba(0, 0, 0, 0.8);
+	background-color: white;
+	z-index:999;
+	text-align: center;
+	border-radius: 8px;
+}
+#lightbox #center img#image {
+	max-width: 100%;
+	max-height: 50%;
+}
+#lightbox #close{
+    position: absolute;
+    bottom: 8px;
+	right: 8px;
+	cursor: pointer;
+}
