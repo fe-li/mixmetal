@@ -210,7 +210,7 @@ include_once 'common.php';
 													</div>								
 												</figure>	
 												<p>
-												<a href="<?php unlink($file); ?>">Usuñ</a>
+												<a href="<?php unlink($file); ?>">Usuï¿½</a>
 												</p>
 											</div>
 										<?php
